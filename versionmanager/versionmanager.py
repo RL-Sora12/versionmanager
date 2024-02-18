@@ -19,22 +19,3 @@ def get_version(name):
         except FileNotFoundError:
             version = None
     return None
-    
-def download_version(name):
-    if name == "java":
-        url = "https://www.java.com/en/download/"
-    elif name == "python":
-        url = "https://www.python.org/downloads/"
-    response = requests.get(url)
-    if response.status_code != 200:
-        print("ページを取得できませんでした。")
-        return None
-    soup = BeautifulSoup(response.text, "html.parser")
-    version_element = soup.find("div", {"class": "product_version"})
-    if version_element is None:
-        print("バージョン情報が見つかりませんでした。")
-        return None
-    version_text = version_element.text.strip()
-    version_text
-
-    return version_text
