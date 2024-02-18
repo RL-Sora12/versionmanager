@@ -1,9 +1,4 @@
 import subprocess
-import requests
-import re
-from bs4 import BeautifulSoup
-import zipfile
-import os
 
 def get_version(name):
     verNameList = ["version","-version","--version","-V","-VV"]
