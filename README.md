@@ -1,3 +1,3 @@
-#　Version Manager
-##　説明
+#　Version Manager　#
+##　説明  ##
 
